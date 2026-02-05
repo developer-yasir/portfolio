@@ -1,16 +1,34 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import ThemeToggle from './helper/theme-toggle';
 import MobileMenu from './helper/mobile-menu';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <nav className="sticky top-0 z-[9999] bg-[var(--nav-bg)] backdrop-blur-lg pointer-events-auto border-b border-[var(--card-border)]/30 transition-colors">
+      <nav className={`sticky top-0 z-[9999] bg-[var(--nav-bg)] backdrop-blur-lg pointer-events-auto border-b transition-all duration-300 ${
+        scrolled 
+          ? 'border-[var(--card-border)]/50 shadow-md shadow-black/10 dark:shadow-black/30' 
+          : 'border-[var(--card-border)]/30'
+      }`}>
         <div className="relative flex items-center py-4">
           {/* Logo - Left Side */}
           <div className="flex flex-1 items-center justify-start">
