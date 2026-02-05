@@ -88,7 +88,7 @@ function Navbar() {
               className="hidden sm:block"
             >
               <a
-                className="relative group overflow-hidden flex items-center gap-1 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-extrabold text-[#0d1224] transition-all duration-300 hover:scale-110 active:scale-95 shadow-xl"
+                className="relative group overflow-hidden flex items-center gap-1 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-extrabold text-[var(--background-color)] transition-all duration-300 hover:scale-110 active:scale-95 shadow-xl"
                 href="/#contact"
               >
                 {/* Shimmer Effect */}

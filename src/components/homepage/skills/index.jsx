@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-10 border-t my-12 lg:my-24 border-[#25213b]">
+    <div id="skills" className="relative z-10 border-t my-12 lg:my-24 border-[var(--card-border)]">
       <div className="w-[100px] h-[100px] bg-cyan-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
@@ -28,7 +28,7 @@ function Skills() {
       <div className="w-full my-12 space-y-16">
         {Object.entries(skillsData).map(([category, skills], index) => (
           <div key={index} className="space-y-6">
-            <h3 className="text-xl md:text-2xl font-bold text-white flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-3">
               <span className="w-8 h-[1px] bg-cyan-500"></span>
               {category}
             </h3>
@@ -38,7 +38,7 @@ function Skills() {
                   className="w-32 md:w-36 h-fit flex flex-col items-center justify-center transition-all duration-500 rounded-lg group relative hover:scale-[1.1] cursor-pointer"
                   key={id}
                 >
-                  <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] group-hover:border-cyan-500 transition-all duration-500">
+                  <div className="h-full w-full rounded-lg border border-[var(--card-border)] bg-[var(--card-bg)] group-hover:border-cyan-500 transition-all duration-500">
                     <div className="flex -translate-y-[1px] justify-center">
                       <div className="w-3/4">
                         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
@@ -54,7 +54,7 @@ function Skills() {
                           className="h-full w-auto rounded-lg"
                         />
                       </div>
-                      <p className="text-white text-xs md:text-sm">
+                      <p className="text-[var(--text-primary)] text-xs md:text-sm">
                         {skill}
                       </p>
                     </div>
