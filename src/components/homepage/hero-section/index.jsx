@@ -22,7 +22,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[var(--background-color)] pt-[0px] pb-8 lg:pb-12 overflow-hidden transition-colors">
+    <section className="relative min-h-screen flex items-center justify-center bg-[var(--background-color)] pt-[100px] pb-8 lg:pb-12 overflow-hidden transition-colors">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
