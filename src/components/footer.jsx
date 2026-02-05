@@ -35,7 +35,7 @@ function Footer() {
   const validSocialLinks = socialLinks.filter(link => link.url && link.url !== '');
 
   return (
-    <footer className="relative bg-[#0d1224] py-16 lg:py-20 overflow-hidden border-t border-white/10">
+    <footer className="relative bg-[var(--background-color)] py-16 lg:py-20 overflow-hidden border-t border-[var(--card-border)] transition-colors">
       {/* Immersive Background Glows */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[120px]" />
@@ -44,14 +44,14 @@ function Footer() {
 
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
 
           {/* Brand Info */}
-          <div className="lg:col-span-1">
-            <a href="/" className="text-[#16f2b3] text-2xl font-bold mb-4 block">
+          <div className="md:col-span-1">
+            <a href="/" className="text-[var(--accent-color)] text-2xl font-bold mb-4 block">
               YASIR RAEES
             </a>
-            <p className="text-gray-400 text-base max-w-xs mb-6">
+            <p className="text-[var(--text-secondary)] text-base max-w-xs mb-6">
               Engineering high-performance digital solutions with a focus on scalability and user experience.
             </p>
 
@@ -65,66 +65,69 @@ function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
-            <ul className="space-y-4">
-              <li>
-                <a href="/#about" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/#experience" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="/#skills" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="/#projects" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
-                  Services
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Connect Section */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Connect</h4>
-            <ul className="space-y-4">
-              <li>
-                <a href={`mailto:${contactsData.email}`} className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
-                  <FaEnvelope className="text-sm" /> {contactsData.email}
-                </a>
-              </li>
-              <li>
-                <a href={`tel:${contactsData.phone}`} className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
-                  <span className="text-sm">{contactsData.phone}</span>
-                </a>
-              </li>
-              <li>
-                <div className="text-gray-400 flex items-center gap-2">
-                  {contactsData.address}
-                </div>
-              </li>
-            </ul>
+          {/* Combined Navigation and Connect Section for Mobile */}
+          <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+            {/* Quick Links */}
+            <div className="mb-8 sm:mb-0 sm:pr-6">
+              <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
+              <ul className="space-y-4">
+                <li>
+                  <a href="/#about" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/#experience" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                    Experience
+                  </a>
+                </li>
+                <li>
+                  <a href="/#skills" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a href="/#projects" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="/services" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                    Services
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Connect Section */}
+            <div className="mt-8 sm:mt-0 sm:pl-6 border-t sm:border-t-0 sm:border-l border-[var(--card-border)] pt-8 sm:pt-0 sm:pl-8">
+              <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Connect</h4>
+              <ul className="space-y-4">
+                <li>
+                  <a href={`mailto:${contactsData.email}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
+                    <FaEnvelope className="text-sm" /> {contactsData.email}
+                  </a>
+                </li>
+                <li>
+                  <a href={`tel:${contactsData.phone}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
+                    <span className="text-sm">{contactsData.phone}</span>
+                  </a>
+                </li>
+                <li>
+                  <div className="text-[var(--text-secondary)] flex items-center gap-2">
+                    {contactsData.address}
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Contact CTA */}
-          <div className="flex flex-col">
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Let's Connect</h4>
+          <div className="md:col-span-1">
+            <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Let's Connect</h4>
             <a
               href="/#contact"
-              className="group flex items-center gap-3 text-emerald-400 font-bold text-lg hover:text-white transition-colors mb-6"
+              className="group flex items-center gap-3 text-emerald-400 font-bold text-lg hover:text-[var(--text-primary)] transition-colors mb-6"
             >
               START A PROJECT
               <FaArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
@@ -139,7 +142,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.name}
-                  className={`text-gray-400 hover:text-emerald-400 transition-colors duration-300 ${link.color}`}
+                  className={`text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 ${link.color}`}
                 >
                   {link.icon}
                 </a>
@@ -147,7 +150,7 @@ function Footer() {
             </div>
 
             {/* Local Time Display */}
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
+            <div className="flex items-center gap-2 text-[var(--text-secondary)] text-sm opacity-60">
               <FaClock className="text-emerald-500/50" />
               <span className="font-mono">PK: {time || "Checking..."}</span>
             </div>
@@ -155,20 +158,20 @@ function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-8">
+        <div className="border-t border-[var(--card-border)] pt-8 transition-colors">
           {/* Bottom Section: Copyright and Tech Stack */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <p className="text-gray-500 text-sm">
-                © {currentYear} <span className="text-white font-medium">{personalData.name}</span>. All rights reserved.
+              <p className="text-[var(--text-secondary)] text-sm">
+                © {currentYear} <span className="text-[var(--text-primary)] font-medium">{personalData.name}</span>. All rights reserved.
               </p>
             </div>
 
-            <div className="flex items-center gap-4 text-gray-500 text-sm">
+            <div className="flex items-center gap-4 text-[var(--text-secondary)] text-sm">
               <span>Made with</span>
               <div className="flex gap-2">
                 <SiTailwindcss className="text-blue-400" size={20} title="Tailwind CSS" />
-                <SiFramer className="text-gray-200" size={20} title="Framer Motion" />
+                <SiFramer className="text-gray-400" size={20} title="Framer Motion" />
                 <SiJavascript className="text-yellow-400" size={20} title="JavaScript" />
               </div>
             </div>
