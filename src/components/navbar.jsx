@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-[9999] bg-[var(--nav-bg)] backdrop-blur-md pointer-events-auto border-b border-white/5 transition-colors">
+      <nav className="sticky top-0 z-[9999] bg-[var(--nav-bg)] backdrop-blur-md pointer-events-auto border-b border-white/5 transition-colors shadow-sm">
         <div className="relative flex items-center py-5">
           {/* Logo - Left Side */}
           <div className="flex flex-1 items-center justify-start">
