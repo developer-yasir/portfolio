@@ -17,6 +17,10 @@ import Education from "./components/homepage/education";
 import Blog from "./components/homepage/blog";
 import ContactSection from "./components/homepage/contact";
 
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home";
+import ServicesPage from "./pages/services";
+
 function App() {
   return (
     <div className="font-inter">
@@ -25,18 +29,10 @@ function App() {
         <ScrollProgress />
         <Navbar />
 
-        <div suppressHydrationWarning>
-          <HeroSection />
-          <AboutSection />
-          <Experience />
-          <Skills />
-          <Projects />
-          <GitHubActivity />
-          <Services />
-          <Education />
-          <Blog />
-          <ContactSection />
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+        </Routes>
 
         <ScrollToTop />
       </main>

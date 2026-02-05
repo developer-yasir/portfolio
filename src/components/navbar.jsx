@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -6,11 +7,11 @@ function Navbar() {
       <div className="relative flex items-center py-5">
         {/* Logo - Left Side (Expanded to push menu to center) */}
         <div className="flex flex-1 items-center justify-start">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-[#16f2b3] text-2xl lg:text-3xl font-bold whitespace-nowrap">
             YASIR RAEES
-          </a>
+          </Link>
         </div>
 
         {/* Menu Items - Absolute Center (Visible on Desktop) */}
@@ -38,9 +39,9 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a className="block px-3 py-2 no-underline outline-none hover:no-underline transition-colors duration-300 text-white hover:text-[#16f2b3]" href="/services">
+              <Link className="block px-3 py-2 no-underline outline-none hover:no-underline transition-colors duration-300 text-white hover:text-[#16f2b3]" to="/services">
                 SERVICES
-              </a>
+              </Link>
             </li>
             <li>
               <a className="block px-3 py-2 no-underline outline-none hover:no-underline transition-colors duration-300 text-white hover:text-[#16f2b3]" href="/#education">
@@ -48,9 +49,9 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a className="block px-3 py-2 no-underline outline-none hover:no-underline transition-colors duration-300 text-white hover:text-[#16f2b3]" href="/blog">
+              <Link className="block px-3 py-2 no-underline outline-none hover:no-underline transition-colors duration-300 text-white hover:text-[#16f2b3]" to="/blog">
                 BLOG
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
