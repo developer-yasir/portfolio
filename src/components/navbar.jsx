@@ -10,8 +10,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-[9999] bg-[var(--nav-bg)] backdrop-blur-md pointer-events-auto border-b border-white/5 transition-colors shadow-sm">
-        <div className="relative flex items-center py-5">
+      <nav className="sticky top-0 z-[9999] bg-[var(--nav-bg)] backdrop-blur-lg pointer-events-auto border-b border-[var(--card-border)]/30 transition-colors">
+        <div className="relative flex items-center py-4">
           {/* Logo - Left Side */}
           <div className="flex flex-1 items-center justify-start">
             <Link
@@ -88,7 +88,7 @@ function Navbar() {
               className="hidden sm:block"
             >
               <a
-                className="relative group overflow-hidden flex items-center gap-1 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-extrabold text-[var(--background-color)] transition-all duration-300 hover:scale-110 active:scale-95 shadow-xl"
+                className="relative group overflow-hidden flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-bold text-[var(--background-color)] transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_4px_14px_rgba(0,0,0,0.25)]"
                 href="/#contact"
               >
                 {/* Shimmer Effect */}
