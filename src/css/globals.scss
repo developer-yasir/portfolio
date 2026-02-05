@@ -69,11 +69,12 @@ video {
   --foreground-rgb: 55, 65, 81;
   --background-color: #f8fafc;
   --card-bg: #ffffff;
-  --card-border: #e2e8f0;
+  --card-border: #cbd5e1;
   --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-secondary: #64748b;
   --accent-color: #059669;
-  --nav-bg: rgba(248, 250, 252, 0.8);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-light-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 body {
@@ -81,6 +82,7 @@ body {
   background-color: var(--background-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 #sticky-card-1 {
   --index: 1;

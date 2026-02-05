@@ -34,7 +34,7 @@ function ProjectCard({ project }) {
         <a
           href={project.code || "#"}
           target="_blank" rel="noreferrer"
-          className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-pink-500 border border-pink-500/50 rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300"
+          className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[var(--accent-color)] border border-[var(--accent-color)]/50 rounded-full hover:bg-[var(--accent-color)] hover:text-white transition-all duration-300"
         >
           <FaCode size={16} />
           <span>Code</span>
@@ -43,7 +43,7 @@ function ProjectCard({ project }) {
           <a
             href={project.demo}
             target="_blank" rel="noreferrer"
-            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 border border-cyan-400/50 rounded-full hover:bg-cyan-400 hover:text-[#0d1224] transition-all duration-300"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[var(--accent-color)] border border-[var(--accent-color)]/50 rounded-full hover:bg-[var(--accent-color)] hover:text-white transition-all duration-300"
           >
             <FaExternalLinkAlt size={14} />
             <span>Live Demo</span>

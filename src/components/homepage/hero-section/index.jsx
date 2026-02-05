@@ -22,7 +22,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[var(--background-color)] pt-[0px] pb-8 lg:pb-12 overflow-hidden transition-colors">
+    <section className="relative min-h-screen flex items-center justify-center bg-[var(--background-color)] pt-[100px] pb-8 lg:pb-12 overflow-hidden transition-colors">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
@@ -67,17 +67,17 @@ function HeroSection() {
               <a
                 href={personalData.resume}
                 target="_blank"
-                className="px-8 py-4 border border-white/10 hover:border-emerald-500/50 text-white font-bold rounded-xl transition-all hover:bg-emerald-500/5 flex items-center gap-2"
+                className="px-8 py-4 border border-[var(--card-border)] hover:border-emerald-500/50 text-[var(--text-primary)] font-bold rounded-xl transition-all hover:bg-emerald-500/5 flex items-center gap-2"
               >
                 Download CV <HiDownload size={20} />
               </a>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex items-center gap-6 pt-4 border-t border-white/10">
-              <a href={personalData.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <motion.div variants={itemVariants} className="flex items-center gap-6 pt-4 border-t border-[var(--card-border)]">
+              <a href={personalData.github} target="_blank" rel="noreferrer" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">
                 <FaGithub size={28} />
               </a>
-              <a href={personalData.linkedIn} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href={personalData.linkedIn} target="_blank" rel="noreferrer" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors">
                 <FaLinkedin size={28} />
               </a>
             </motion.div>

@@ -49,19 +49,19 @@ function Experience() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[cyan-400]">
+                        <p className="text-xs sm:text-sm text-[var(--accent-color)]">
                           {experience.duration}
                         </p>
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-cyan-500  transition-all duration-300 hover:scale-125">
+                        <div className="text-[var(--accent-color)] transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                          <p className="text-base sm:text-xl mb-2 font-medium uppercase text-[var(--text-primary)]">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
+                          <p className="text-sm sm:text-base text-[var(--text-secondary)]">
                             {experience.company}
                           </p>
                         </div>

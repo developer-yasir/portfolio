@@ -58,22 +58,22 @@ function AboutSection() {
 
             <div className="relative group flex-grow h-full min-h-[400px]">
               {/* Window Header */}
-              <div className="absolute top-0 left-0 right-0 h-10 bg-[var(--card-border)] rounded-t-2xl border-t border-x border-white/10 flex items-center px-4 gap-2 z-20 transition-colors">
+              <div className="absolute top-0 left-0 right-0 h-10 bg-[var(--card-border)] rounded-t-2xl border-t border-x border-[var(--card-border)] flex items-center px-4 gap-2 z-20 transition-colors">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
                   <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
                   <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
                 </div>
-                <div className="flex-grow text-center text-[10px] text-gray-500 font-mono uppercase tracking-tighter">
+                <div className="flex-grow text-center text-[10px] text-[var(--text-secondary)] font-mono uppercase tracking-tighter">
                   developer_profile.js — 1280×800
                 </div>
               </div>
 
               {/* IDE Content */}
-              <div className="absolute inset-0 pt-10 pb-6 px-6 bg-[var(--card-bg)]/80 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden font-mono text-sm md:text-base cursor-text group-hover:border-emerald-500/30 transition-colors">
+              <div className="absolute inset-0 pt-10 pb-6 px-6 bg-[var(--card-bg)]/80 backdrop-blur-xl rounded-2xl border border-[var(--card-border)] shadow-[var(--card-light-shadow)] overflow-hidden font-mono text-sm md:text-base cursor-text group-hover:border-emerald-500/30 transition-colors">
                 <div className="h-full overflow-auto scrollbar-hide py-4 relative">
                   {/* Line Numbers Decorator */}
-                  <div className="absolute left-0 top-4 w-6 text-gray-700 text-right pr-4 select-none italic text-xs">
+                  <div className="absolute left-0 top-4 w-6 text-[var(--text-secondary)] text-right pr-4 select-none italic text-xs">
                     {Array.from({ length: 14 }).map((_, i) => (
                       <div key={i}>{i + 1}</div>
                     ))}

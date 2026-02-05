@@ -32,7 +32,7 @@ const servicesData = [
 
 function Services() {
     return (
-        <div id="services" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+        <div id="services" className="relative z-50 border-t my-12 lg:my-24 border-[var(--card-border)] transition-colors">
             <div className="flex justify-center -translate-y-[1px]">
                 <div className="w-3/4">
                     <div className="h-[1px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-full" />
@@ -41,11 +41,11 @@ function Services() {
 
             <div className="flex justify-center my-5 lg:py-8">
                 <div className="flex items-center">
-                    <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-                    <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+                    <span className="w-24 h-[2px] bg-[var(--card-border)]"></span>
+                    <span className="bg-[var(--card-bg)] w-fit text-[var(--text-primary)] p-2 px-5 text-xl rounded-md border border-[var(--card-border)] transition-colors">
                         Services
                     </span>
-                    <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+                    <span className="w-24 h-[2px] bg-[var(--card-border)]"></span>
                 </div>
             </div>
 
@@ -61,14 +61,14 @@ function Services() {
                                 className="absolute bottom-0 left-0 opacity-50 -z-10"
                             />
                             <div className="flex items-start gap-6">
-                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:border-emerald-500/30 transition-all duration-300">
+                                <div className="p-4 rounded-2xl bg-[var(--card-bg)]/50 border border-[var(--card-border)] group-hover:border-[var(--accent-color)]/30 transition-all duration-300">
                                     {service.icon}
                                 </div>
                                 <div className="flex-grow">
-                                    <h3 className="mb-2 text-xl lg:text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                                    <h3 className="mb-2 text-xl lg:text-2xl font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-color)] transition-colors">
                                         {service.title}
                                     </h3>
-                                    <p className="text-sm lg:text-base text-gray-400 leading-relaxed">
+                                    <p className="text-sm lg:text-base text-[var(--text-secondary)] leading-relaxed">
                                         {service.description}
                                     </p>
                                 </div>
@@ -81,7 +81,7 @@ function Services() {
             <div className="flex justify-center mt-12">
                 <a
                     href="/services"
-                    className="flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-8 py-3 text-sm font-bold text-[#0d1224] transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+                    className="flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-8 py-3 text-sm font-bold text-[var(--background-color)] transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.2)]"
                 >
                     EXPLORE ALL SERVICES
                     <FaArrowRight size={14} />

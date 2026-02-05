@@ -174,7 +174,7 @@ const ContactForm = () => {
           className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${isSubmitting
               ? 'bg-gray-600 cursor-not-allowed'
               : 'bg-[var(--accent-color)] hover:bg-emerald-600 hover:scale-105 active:scale-95'
-            } text-[#0d1224] flex items-center justify-center gap-2`}
+            } text-[var(--background-color)] flex items-center justify-center gap-2`}
         >
           {isSubmitting ? (
             <>

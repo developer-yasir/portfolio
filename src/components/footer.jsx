@@ -44,10 +44,10 @@ function Footer() {
 
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
           {/* Brand Info */}
-          <div className="md:col-span-1">
+          <div className="lg:col-span-1">
             <a href="/" className="text-[var(--accent-color)] text-2xl font-bold mb-4 block">
               YASIR RAEES
             </a>
@@ -65,65 +65,121 @@ function Footer() {
             </div>
           </div>
 
-          {/* Combined Navigation and Connect Section for Mobile */}
-          <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
-            {/* Quick Links */}
-            <div className="mb-8 sm:mb-0 sm:pr-6">
-              <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
-              <ul className="space-y-4">
-                <li>
-                  <a href="/#about" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="/#experience" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
-                    Experience
-                  </a>
-                </li>
-                <li>
-                  <a href="/#skills" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
-                    Skills
-                  </a>
-                </li>
-                <li>
-                  <a href="/#projects" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="/services" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
-                    Services
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            {/* Connect Section */}
-            <div className="mt-8 sm:mt-0 sm:pl-6 border-t sm:border-t-0 sm:border-l border-[var(--card-border)] pt-8 sm:pt-0 sm:pl-8">
-              <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Connect</h4>
-              <ul className="space-y-4">
-                <li>
-                  <a href={`mailto:${contactsData.email}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
-                    <FaEnvelope className="text-sm" /> {contactsData.email}
-                  </a>
-                </li>
-                <li>
-                  <a href={`tel:${contactsData.phone}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
-                    <span className="text-sm">{contactsData.phone}</span>
-                  </a>
-                </li>
-                <li>
-                  <div className="text-[var(--text-secondary)] flex items-center gap-2">
-                    {contactsData.address}
-                  </div>
-                </li>
-              </ul>
+          {/* Combined Navigation and Connect for Mobile - Shows only on mobile */}
+          <div className="sm:col-span-2 lg:col-span-2 lg:hidden">
+            <div className="grid grid-cols-2 gap-8">
+              {/* Navigation Column */}
+              <div>
+                <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
+                <ul className="space-y-4">
+                  <li>
+                    <a href="/#about" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#experience" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                      Experience
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#skills" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                      Skills
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#projects" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                      Projects
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                      Services
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+              {/* Connect Column */}
+              <div>
+                <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Connect</h4>
+                <ul className="space-y-4">
+                  <li>
+                    <a href={`mailto:${contactsData.email}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
+                      <FaEnvelope className="text-sm" /> {contactsData.email}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={`tel:${contactsData.phone}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
+                      <span className="text-sm">{contactsData.phone}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div className="text-[var(--text-secondary)] flex items-center gap-2">
+                      {contactsData.address}
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
+          {/* Quick Links - Show on desktop */}
+          <div className="hidden lg:block">
+            <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href="/#about" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/#experience" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a href="/#skills" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a href="/#projects" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300">
+                  Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Connect Section - Show on desktop */}
+          <div className="hidden lg:block">
+            <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Connect</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href={`mailto:${contactsData.email}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
+                  <FaEnvelope className="text-sm" /> {contactsData.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${contactsData.phone}`} className="text-[var(--text-secondary)] hover:text-emerald-400 transition-colors duration-300 flex items-center gap-2">
+                  <span className="text-sm">{contactsData.phone}</span>
+                </a>
+              </li>
+              <li>
+                <div className="text-[var(--text-secondary)] flex items-center gap-2">
+                  {contactsData.address}
+                </div>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact CTA */}
-          <div className="md:col-span-1">
+          <div className="flex flex-col">
             <h4 className="text-[var(--text-primary)] font-bold mb-6 uppercase tracking-widest text-sm">Let's Connect</h4>
             <a
               href="/#contact"
