@@ -2,7 +2,7 @@ import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 function ProjectCard({ project }) {
   return (
-    <div className="group relative rounded-xl border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] p-6 transition-all duration-300 hover:scale-[1.02] hover:border-pink-500/50 flex flex-col h-full shadow-lg">
+    <div className="group relative rounded-xl border border-[var(--card-border)] bg-[var(--card-bg)] p-6 transition-all duration-300 hover:scale-[1.02] hover:border-[var(--accent-color)] flex flex-col h-full shadow-lg">
       <div className="flex flex-row space-x-2 mb-4">
         <div className="h-3 w-3 rounded-full bg-red-500/80 shadow-sm"></div>
         <div className="h-3 w-3 rounded-full bg-amber-500/80 shadow-sm"></div>
@@ -10,11 +10,11 @@ function ProjectCard({ project }) {
       </div>
 
       <div className="flex-grow">
-        <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-pink-500 transition-colors">
+        <h3 className="text-xl lg:text-2xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--accent-color)] transition-colors">
           {project.name}
         </h3>
 
-        <p className="text-sm text-gray-400 mb-6 line-clamp-4 leading-relaxed">
+        <p className="text-sm text-[var(--text-secondary)] mb-6 line-clamp-4 leading-relaxed">
           {project.description}
         </p>
 
@@ -39,14 +39,16 @@ function ProjectCard({ project }) {
           <FaCode size={16} />
           <span>Code</span>
         </a>
-        <a
-          href={project.demo || "#"}
-          target="_blank" rel="noreferrer"
-          className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 border border-cyan-400/50 rounded-full hover:bg-cyan-400 hover:text-[#0d1224] transition-all duration-300"
-        >
-          <FaExternalLinkAlt size={14} />
-          <span>Live Demo</span>
-        </a>
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank" rel="noreferrer"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 border border-cyan-400/50 rounded-full hover:bg-cyan-400 hover:text-[#0d1224] transition-all duration-300"
+          >
+            <FaExternalLinkAlt size={14} />
+            <span>Live Demo</span>
+          </a>
+        )}
       </div>
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />

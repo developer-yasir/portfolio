@@ -22,7 +22,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#0d1224] py-16 lg:py-24 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-[var(--background-color)] pt-[0px] pb-8 lg:pb-12 overflow-hidden transition-colors">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
@@ -48,13 +48,13 @@ function HeroSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-[var(--text-primary)] leading-tight">
                 Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 italic font-medium">high-performance</span> digital solutions.
               </h1>
             </motion.div>
 
-            <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed">
-              I'm <span className="text-white font-semibold">{personalData.name}</span>, a seasoned Software Engineer specializing in the MERN stack. I transform complex problems into elegant, scalable web applications.
+            <motion.p variants={itemVariants} className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl leading-relaxed">
+              I'm <span className="text-[var(--text-primary)] font-semibold">{personalData.name}</span>, a seasoned Software Engineer specializing in the MERN stack. I transform complex problems into elegant, scalable web applications.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
@@ -84,19 +84,20 @@ function HeroSection() {
           </div>
 
           {/* Visual Side */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative group">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="relative aspect-square"
+              className="relative"
             >
               {/* Profile Image with Glassmorphism Effect */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-white/5 shadow-2xl group">
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-500 group-hover:border-emerald-500/30">
                 <img
                   src={personalData.profile}
                   alt={personalData.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1224] via-transparent to-transparent opacity-60" />
               </div>
