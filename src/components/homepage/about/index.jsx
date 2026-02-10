@@ -20,18 +20,7 @@ function AboutSection() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  const codeString = `const developer = {
-  name: '${personalData.name}',
-  role: 'Software Engineer',
-  specialty: 'MERN Stack',
-  passion: 'Scalable Systems',
-  location: '${personalData.address}',
-  hireable: true,
-  skills: ['React', 'NodeJS', 'MongoDB', 'Next.js'],
-  philosophy: function() {
-    return "Code is Art; Performance is Key";
-  }
-};`;
+
 
   return (
     <section id="about" className="relative py-24 lg:py-32 overflow-hidden bg-[var(--background-color)] transition-colors">
@@ -165,6 +154,7 @@ function AboutSection() {
                     alt="Hero"
                     width={1080}
                     height={200}
+                    loading="lazy"
                     className="absolute bottom-0 left-0 opacity-80"
                   />
                   <div className="flex items-center gap-x-6 h-full">
@@ -191,6 +181,7 @@ function AboutSection() {
                     alt="Hero"
                     width={1080}
                     height={200}
+                    loading="lazy"
                     className="absolute bottom-0 left-0 opacity-80"
                   />
                   <div className="flex items-center gap-x-6 h-full">
@@ -217,6 +208,7 @@ function AboutSection() {
                     alt="Hero"
                     width={1080}
                     height={200}
+                    loading="lazy"
                     className="absolute bottom-0 left-0 opacity-80"
                   />
                   <div className="flex items-center gap-x-6 h-full">
@@ -243,6 +235,7 @@ function AboutSection() {
                     alt="Hero"
                     width={1080}
                     height={200}
+                    loading="lazy"
                     className="absolute bottom-0 left-0 opacity-80"
                   />
                   <div className="flex items-center gap-x-6 h-full">
