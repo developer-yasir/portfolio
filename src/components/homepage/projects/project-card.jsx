@@ -1,4 +1,5 @@
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
+import { memo } from 'react';
 
 function ProjectCard({ project }) {
   return (
@@ -56,4 +57,4 @@ function ProjectCard({ project }) {
   );
 }
 
-export default ProjectCard;
+export default memo(ProjectCard);
