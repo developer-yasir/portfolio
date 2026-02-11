@@ -4,6 +4,8 @@ import Footer from "./components/footer";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import ScrollProgress from "./components/helper/scroll-progress";
 import Navbar from "./components/navbar";
+import ErrorBoundary from "./components/ErrorBoundary";
+import SkipToContent from "./components/helper/SkipToContent";
 import "./css/card.scss";
 // Homepage Sections
 import HeroSection from "./components/homepage/hero-section";
@@ -20,24 +22,29 @@ import ContactSection from "./components/homepage/contact";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home";
 import ServicesPage from "./pages/services";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="font-inter">
-      <ToastContainer />
-      <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
-        <ScrollProgress />
-        <Navbar />
+    <ErrorBoundary>
+      <SkipToContent />
+      <div className="font-inter">
+        <ToastContainer />
+        <main id="main-content" className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+          <ScrollProgress />
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-        <ScrollToTop />
-      </main>
-      <Footer />
-    </div>
+          <ScrollToTop />
+        </main>
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
 
