@@ -4,17 +4,21 @@ export const skillsData = {
     'CSS',
     'Javascript',
     'React',
+    'Next JS',
     'Tailwind',
-    'Bootstrap'
+    'Bootstrap',
+    'Redux'
   ],
   Backend: [
     'Node JS',
     'Express JS',
     'MongoDB',
-    'MySQL'
+    'MySQL',
+    'Dot.Net'
   ],
   Others: [
     'Git',
+    'GitHub',
     'Wordpress'
   ]
 };

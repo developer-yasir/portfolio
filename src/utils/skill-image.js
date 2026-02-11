@@ -86,6 +86,7 @@ import sqlalchemy from '../assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../assets/svg/skills/fastapi.svg'
 
 
+import redux from '../assets/svg/skills/redux.svg';
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -260,6 +261,12 @@ export const skillsImage = (skill) => {
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'github':
+      return git;
+    case 'dot.net':
+      return dotnet;
+    case 'redux':
+      return redux;
     default:
       break;
   }

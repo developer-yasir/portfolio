@@ -44,23 +44,23 @@ function Skills() {
 
       <div className="w-full max-w-6xl mx-auto px-4">
         {Object.entries(skillsData).map(([category, skills], index) => (
-          <motion.div 
-            key={index} 
+          <motion.div
+            key={index}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16 last:mb-0"
           >
-            <motion.h3 
-              variants={itemVariants} 
+            <motion.h3
+              variants={itemVariants}
               className="text-2xl md:text-3xl font-bold text-center mb-10 flex items-center justify-center gap-4"
             >
               <span className="text-[var(--text-primary)]">{category}</span>
               <span className="h-px w-12 bg-[var(--accent-color)]"></span>
             </motion.h3>
-            
-            <motion.div 
+
+            <motion.div
               variants={containerVariants}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6"
             >
@@ -79,6 +79,7 @@ function Skills() {
                           alt={skill}
                           width={48}
                           height={48}
+                          loading="lazy"
                           className="h-full w-full object-contain"
                         />
                       </div>
@@ -86,11 +87,11 @@ function Skills() {
                         {skill}
                       </h4>
                     </div>
-                    
+
                     {/* Hover effect overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-color)]/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  
+
                   {/* Glow effect */}
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--accent-color)] to-emerald-500 rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10" />
                 </motion.div>
