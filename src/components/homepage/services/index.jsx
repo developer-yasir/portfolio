@@ -6,25 +6,25 @@ import GlowCard from "../../helper/glow-card";
 const servicesData = [
     {
         title: "Full Stack Development",
-        description: "Building robust, scalable web applications using the MERN stack (MongoDB, Express, React, Node.js).",
+        description: "I build full-stack apps with MongoDB, Express, React, and Node.js—handling everything from database design to user interface.",
         icon: <FaLayerGroup className="text-emerald-500" size={36} />,
         identifier: "home-service-1"
     },
     {
         title: "Frontend Engineering",
-        description: "Creating responsive, high-performance user interfaces with React, Next.js, and Tailwind CSS.",
+        description: "I create fast, responsive interfaces using React, Next.js, and Tailwind CSS that work great on any device.",
         icon: <BiCodeAlt className="text-cyan-500" size={36} />,
         identifier: "home-service-2"
     },
     {
         title: "Backend & API Development",
-        description: "Designing and implementing secure RESTful APIs and server-side logic using Node.js and Express.",
+        description: "I design and build REST APIs with Node.js and Express that are secure, well-documented, and easy to work with.",
         icon: <FaDatabase className="text-violet-500" size={36} />,
         identifier: "home-service-3"
     },
     {
         title: "CMS & WordPress",
-        description: "Custom WordPress development and management, ensuring sites are fast and reliable.",
+        description: "I develop custom WordPress sites and make sure they're fast, secure, and easy for you to manage.",
         icon: <FaWordpress className="text-amber-500" size={36} />,
         identifier: "home-service-4"
     }

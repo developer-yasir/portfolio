@@ -105,8 +105,8 @@ const Projects = () => {
             key={category}
             onClick={() => setSelectedFilter(category)}
             className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${selectedFilter === category
-                ? 'bg-[var(--accent-color)] text-[#0d1224] shadow-lg scale-105'
-                : 'bg-[var(--card-bg)] text-[var(--text-secondary)] border border-[var(--card-border)] hover:border-[var(--accent-color)] hover:text-[var(--accent-color)]'
+              ? 'bg-[var(--accent-color)] text-[#0d1224] shadow-lg scale-105'
+              : 'bg-[var(--card-bg)] text-[var(--text-secondary)] border border-[var(--card-border)] hover:border-[var(--accent-color)] hover:text-[var(--accent-color)]'
               }`}
             aria-label={`Filter projects by ${category}`}
             aria-pressed={selectedFilter === category}
@@ -158,6 +158,33 @@ const Projects = () => {
             Clear Filters
           </button>
         </div>
+      )}
+
+      {/* CTA Section */}
+      {sortedProjects.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-16 text-center bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-emerald-500/10 border border-emerald-500/20 rounded-2xl p-8 lg:p-12"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
+            Like what you see?
+          </h3>
+          <p className="text-[var(--text-secondary)] text-lg mb-6 max-w-2xl mx-auto">
+            I'm always excited to work on new projects. Let's build something amazing together!
+          </p>
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 inline-flex items-center gap-2"
+          >
+            Get In Touch
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </motion.div>
       )}
     </div>
   );

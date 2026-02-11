@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import confetti from 'canvas-confetti';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -62,6 +63,14 @@ const ContactForm = () => {
 
     try {
       await axios.post('/api/contact', formData);
+
+      // Trigger confetti celebration
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+
       toast.success('Message sent successfully! I\'ll get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
       setErrors({});
@@ -172,8 +181,8 @@ const ContactForm = () => {
           type="submit"
           disabled={isSubmitting}
           className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${isSubmitting
-              ? 'bg-gray-600 cursor-not-allowed'
-              : 'bg-[var(--accent-color)] hover:bg-emerald-600 hover:scale-105 active:scale-95'
+            ? 'bg-gray-600 cursor-not-allowed'
+            : 'bg-[var(--accent-color)] hover:bg-emerald-600 hover:scale-105 active:scale-95'
             } text-[var(--background-color)] flex items-center justify-center gap-2`}
         >
           {isSubmitting ? (
