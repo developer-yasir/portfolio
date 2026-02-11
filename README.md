@@ -1,16 +1,73 @@
-# React + Vite
+# Yasir Raees - Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and interactive developer portfolio built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+![Portfolio Preview](./public/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **Modern UI/UX**: Clean design with glassmorphism effects, smooth animations, and dark mode support.
+- **Responsive Design**: Fully optimizing for all devices (mobile, tablet, desktop).
+- **Interactive Elements**:
+  - Typing animations for hero section
+  - Confetti celebration on contact form submission 🎉
+  - Animated gradient borders
+  - Smooth scrolling navigation
+- **GitHub Integration**:
+  - Real-time contribution calendar (theme-aware)
+  - GitHub stats cards showing contributions and language breakdown
+  - Direct links to repositories
+- **Project Showcase**:
+  - Featured projects with "Star" badges
+  - Live Demo & Code links
+  - Filtering by tech stack (React, Backend, AI/ML, Database)
+  - Sorting (Newest, Oldest, Name)
+- **Contact Form**: Functional contact form with validation and email integration.
+- **SEO Optimized**: Meta tags, Open Graph data, and semantic HTML structure.
+- **Accessibility**: Keyboard navigation, skip-to-content links, and ARIA labels.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React, Vite
+- **Styling**: Tailwind CSS, SCSS
+- **Animations**: Framer Motion, Lottie Files, Canvas Confetti
+- **Icons**: React Icons
+- **Utils**: React Toastify, React Scroll
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏃‍♂️ Running Locally
+
+1. Clone the repository
+```bash
+git clone https://github.com/developer-yasir/Portfolio.git
+```
+
+2. Install dependencies
+```bash
+cd Portfolio
+npm install
+```
+
+3. Start development server
+```bash
+npm run dev
+```
+
+4. Build for production
+```bash
+npm run build
+```
+
+## 📝 Configuration
+
+### Personal Data
+Edit `src/utils/data/personal-data.js` to update your personal information, social links, and bio.
+
+### Projects
+Edit `src/utils/data/projects-data.js` to add or update your projects.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+Made with ❤️ by [Yasir Raees](https://github.com/developer-yasir)

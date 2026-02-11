@@ -47,7 +47,8 @@ function ProjectCard({ project }) {
           <FaCode size={16} />
           <span>Code</span>
         </a>
-        {project.demo && (
+
+        {project.demo ? (
           <a
             href={project.demo}
             target="_blank" rel="noreferrer"
@@ -56,6 +57,15 @@ function ProjectCard({ project }) {
             <FaExternalLinkAlt size={14} />
             <span>Live Demo</span>
           </a>
+        ) : (
+          <button
+            disabled
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gray-500 border border-gray-500/30 rounded-full cursor-not-allowed opacity-60"
+            title="Demo coming soon"
+          >
+            <FaExternalLinkAlt size={14} />
+            <span>Demo Soon</span>
+          </button>
         )}
       </div>
 

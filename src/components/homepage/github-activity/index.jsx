@@ -20,16 +20,12 @@ function GitHubActivity() {
 
             {/* Contribution Calendar */}
             <div className="flex justify-center items-center bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-6">
-                <div className="w-full overflow-x-auto">
+                <div className="w-full flex justify-center" style={{ color: 'var(--text-primary)' }}>
                     <GitHubCalendar
                         username={username}
-                        blockSize={12}
-                        blockMargin={4}
-                        fontSize={14}
-                        colorScheme="light"
-                        style={{
-                            color: 'var(--text-primary)'
-                        }}
+                        blockSize={15}
+                        blockMargin={5}
+                        fontSize={16}
                     />
                 </div>
             </div>
