@@ -137,11 +137,11 @@ function AboutSection() {
           <div className="flex flex-col justify-between py-2">
             <motion.div variants={itemVariants} className="mb-12">
               <h2 className="text-5xl font-black text-[var(--text-primary)] mb-6 leading-[0.9]">
-                Architecting <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500 italic">Solutions</span> that Scale.
+                Building <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500 italic">web apps</span> that work.
               </h2>
               <p className="text-[var(--text-secondary)] text-lg leading-relaxed max-w-lg mb-8">
-                I don't just write code; I build robust digital architectures. My focus is on creating high-performance MERN applications with clean, maintainable logic.
+                I write code that solves real problems. Whether it's a dashboard, an API, or a full-stack app, I focus on making things that work well and are easy to maintain.
               </p>
             </motion.div>
 
@@ -166,7 +166,7 @@ function AboutSection() {
                         1+ Year Experience
                       </p>
                       <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
-                        Expertise in Professional Development
+                        Expertise in Building Real Products
                       </p>
                     </div>
                   </div>
@@ -220,7 +220,7 @@ function AboutSection() {
                         Quality Code
                       </p>
                       <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
-                        Clean Architectures & Patterns
+                        Clean, Maintainable Code
                       </p>
                     </div>
                   </div>
@@ -247,7 +247,7 @@ function AboutSection() {
                         {personalData.address}
                       </p>
                       <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
-                        Available for Global Remote roles
+                        Open to Remote Work
                       </p>
                     </div>
                   </div>

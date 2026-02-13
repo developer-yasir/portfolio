@@ -49,28 +49,30 @@ function HeroSection() {
 
             <motion.div variants={itemVariants}>
               <h1 className="text-5xl md:text-7xl font-bold text-[var(--text-primary)] leading-tight">
-                Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 italic font-medium">high-performance</span> digital solutions.
+                I build <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 italic font-medium">web apps</span> that people actually use.
               </h1>
             </motion.div>
 
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl leading-relaxed">
-              I'm <span className="text-[var(--text-primary)] font-semibold">{personalData.name}</span>, a seasoned Software Engineer specializing in the MERN stack. I transform complex problems into elegant, scalable web applications.
+              I'm <span className="text-[var(--text-primary)] font-semibold">{personalData.name}</span>, a software engineer who loves building things with React and Node.js. I take ideas from messy requirements to working products.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
-              <a
-                href="#contact"
-                className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-[#0d1224] font-bold rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 hover:text-black font-bold rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
               >
                 Let's Talk <MdEmail size={20} />
-              </a>
-              <a
-                href={personalData.resume}
-                target="_blank"
-                className="px-8 py-4 border border-[var(--card-border)] hover:border-emerald-500/50 text-[var(--text-primary)] font-bold rounded-xl transition-all hover:bg-emerald-500/5 flex items-center gap-2"
-              >
-                Download CV <HiDownload size={20} />
-              </a>
+              </button>
+              <div className="relative group/btn overflow-hidden rounded-xl p-[2px] bg-gradient-to-r from-emerald-500 via-cyan-500 to-emerald-500 bg-[length:200%_100%] animate-gradient-shift">
+                <a
+                  href={personalData.resume}
+                  target="_blank"
+                  className="relative px-8 py-4 bg-[var(--background-color)] hover:bg-emerald-500/5 text-[var(--text-primary)] font-bold rounded-xl transition-all flex items-center gap-2"
+                >
+                  Download CV <HiDownload size={20} />
+                </a>
+              </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex items-center gap-6 pt-4 border-t border-[var(--card-border)]">

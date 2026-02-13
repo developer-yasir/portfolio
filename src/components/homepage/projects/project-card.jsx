@@ -4,10 +4,17 @@ import { memo } from 'react';
 function ProjectCard({ project }) {
   return (
     <div className="group relative rounded-xl border border-[var(--card-border)] bg-[var(--card-bg)] p-6 transition-all duration-300 hover:scale-[1.02] hover:border-[var(--accent-color)] flex flex-col h-full shadow-lg">
-      <div className="flex flex-row space-x-2 mb-4">
-        <div className="h-3 w-3 rounded-full bg-red-500/80 shadow-sm"></div>
-        <div className="h-3 w-3 rounded-full bg-amber-500/80 shadow-sm"></div>
-        <div className="h-3 w-3 rounded-full bg-emerald-500/80 shadow-sm"></div>
+      <div className="flex flex-row justify-between items-center mb-4">
+        <div className="flex space-x-2">
+          <div className="h-3 w-3 rounded-full bg-red-500/80 shadow-sm"></div>
+          <div className="h-3 w-3 rounded-full bg-amber-500/80 shadow-sm"></div>
+          <div className="h-3 w-3 rounded-full bg-emerald-500/80 shadow-sm"></div>
+        </div>
+        {project.featured && (
+          <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full shadow-lg">
+            ⭐ Featured
+          </span>
+        )}
       </div>
 
       <div className="flex-grow">
@@ -40,7 +47,8 @@ function ProjectCard({ project }) {
           <FaCode size={16} />
           <span>Code</span>
         </a>
-        {project.demo && (
+
+        {project.demo ? (
           <a
             href={project.demo}
             target="_blank" rel="noreferrer"
@@ -49,6 +57,15 @@ function ProjectCard({ project }) {
             <FaExternalLinkAlt size={14} />
             <span>Live Demo</span>
           </a>
+        ) : (
+          <button
+            disabled
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gray-500 border border-gray-500/30 rounded-full cursor-not-allowed opacity-60"
+            title="Demo coming soon"
+          >
+            <FaExternalLinkAlt size={14} />
+            <span>Demo Soon</span>
+          </button>
         )}
       </div>
 
