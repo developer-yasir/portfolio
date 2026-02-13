@@ -7,6 +7,8 @@ export const projectsData = [
         role: 'Full Stack Developer',
         code: 'https://github.com/developer-yasir/Interview-Helper',
         demo: '',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
+        video: '',
         featured: true,
     },
     {
@@ -17,6 +19,8 @@ export const projectsData = [
         role: 'Full Stack Developer',
         code: 'https://github.com/developer-yasir/support-desk',
         demo: '',
+        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+        video: '',
         featured: true,
     },
     {
@@ -27,6 +31,8 @@ export const projectsData = [
         role: 'Full Stack Developer',
         code: 'https://github.com/developer-yasir/Shopsense',
         demo: '',
+        image: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0',
+        video: '',
         featured: true,
     },
     {
@@ -37,6 +43,8 @@ export const projectsData = [
         code: 'https://github.com/developer-yasir/collab-talk-ai',
         role: 'Full Stack Developer',
         demo: '',
+        image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da',
+        video: '',
     },
     {
         id: 5,
@@ -46,6 +54,8 @@ export const projectsData = [
         code: 'https://github.com/developer-yasir/cash-flow-vision',
         demo: '',
         role: 'Full Stack Developer',
+        image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
+        video: '',
     },
     {
         id: 6,
@@ -53,8 +63,11 @@ export const projectsData = [
         description: "A food delivery app with separate dashboards for customers, restaurants, and admins. Features include cart management, order tracking, and secure authentication. Built with MERN stack.",
         tools: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Context API', 'Axios'],
         code: 'https://github.com/developer-yasir/befoody',
-        demo: '',
+        demo: 'https://developer-yasir.github.io/befoody/',
         role: 'Full Stack Developer',
+        image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836',
+        video: '',
+        featured: true,
     }
 ];
 
@@ -70,4 +83,6 @@ export const projectsData = [
 //     role: '',
 //     code: '',
 //     demo: '',
+//     image: '',
+//     video: '',
 // },
